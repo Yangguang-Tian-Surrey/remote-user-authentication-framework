@@ -201,7 +201,7 @@ class ABE(ABEnc):
 
         nodes = self.util.prune(key['policy'], ctxt['attr_list'])
         if not nodes:
-            # print ("Policy is not satisfied.")
+            print ("Policy is not satisfied.")
             return None
 
         prod1_GT = 1
