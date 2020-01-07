@@ -1,11 +1,18 @@
 '''
 :Authors:         Yangguang Tian et al.
 :Date:            11/2019
-Comment: The protocol below has enrollment and authentication stages. Essentially, the protocol includes a fuzzy extractor scheme (Canetti, et al. "Reusable fuzzy extractors for low-entropy distributions." in EUROCRYPT 2016), a Schnorr signature scheme, and a KP-ABE scheme (Agrawal, Shashank, and Melissa Chase. "FAME: Fast Attribute-based Message Encryption." in ACM CCS 2017). The signature scheme can also be initiated as Waters scheme, because both Schnorr and Waters digital signature schemes has homomorphic property regarding to signing keys and signatures. 
+Comment: The protocol below has enrollment and authentication stages. Essentially, the protocol includes a fuzzy extractor scheme 
+(Canetti, et al. "Reusable fuzzy extractors for low-entropy distributions." in EUROCRYPT 2016), a Schnorr signature scheme, 
+and a KP-ABE scheme (Agrawal, Shashank, and Melissa Chase. "FAME: Fast Attribute-based Message Encryption." in ACM CCS 2017). 
+The signature scheme can also be initiated as Waters scheme, because both Schnorr and Waters digital signature schemes has 
+homomorphic property regarding to signing keys and signatures. 
 
-1. This is running at Python 2.7.15+, [GCC 7.4.0] on linux2. In order to run the protocol, you must install fuzzy-extractor and charm framework, respectively (from github). 
-2. 10 biometrics are involved in the fuzzy extractor. The success of underlying fuzzy extractor is NOT 100% here, it tolerates small chance of false acceptance and rejection. 
-3. The client's public key acts as an attribute, which will be used to generate a ciphertext of ABE. The attribute must be in the format of either '123' or 'abc' (the format of 'a1b2c3' is not allowed due to the MSP in ABE scheme). 
+1. This is running at Python 2.7.15+, [GCC 7.4.0] on linux2. In order to run the protocol, you must install fuzzy-extractor and 
+charm framework, respectively (from github). 
+2. 10 biometrics are involved in the fuzzy extractor. The success of underlying fuzzy extractor is NOT 100% here, it tolerates 
+small chance of false acceptance and rejection. 
+3. The client's public key acts as an attribute, which will be used to generate a ciphertext of ABE. The attribute must be in 
+the format of either '123' or 'abc' (the format of 'a1b2c3' is not allowed due to the MSP in ABE scheme). 
 '''
 
 from charm.toolbox.pairinggroup import PairingGroup, GT
