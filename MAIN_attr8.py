@@ -13,7 +13,7 @@ def main():
     
     # This is Enrollment.
     # Server instantiates a bilinear pairing map, runs the setup of KP-ABE, and runs the setup of FE_DS. 
-    pairing_group = PairingGroup('MNT224')
+    pairing_group = PairingGroup('MNT224') //MNT224 is a type III curve, and alternative curves includes MNT159 (type III), and BN254 (type II)
     abe = ABE(pairing_group, 2) 
     (mpk, msk) = abe.setup()
 
