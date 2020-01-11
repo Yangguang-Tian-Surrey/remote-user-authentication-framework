@@ -1,6 +1,6 @@
 # remote-user-authentication-framework
 
-We use Python to simulate a client-server user authentication from multiple (e.g., 4 and 8) biometircs at the local desktop. 
+We use Python to simulate a client-server user authentication from multiple (e.g., 4 and 8) biometircs at the local desktop. The reason why we use multiple biometrics is to deal with low-entropy issue. For example, user's single biometrics may be compromised or damaged (due to aging).  
 
 To simulate it, we need an attribute based encryption ABE (FAME: Fast Attribute-based Message Encryption, CCS17), and a fuzzy extractor FE (Reusable fuzzy extractors for low-entropy distributions, EUROCRYPT16). We assume the readers are familar with these two concepts. 
 
